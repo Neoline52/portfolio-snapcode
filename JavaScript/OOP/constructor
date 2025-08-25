@@ -1,0 +1,26 @@
+function Person(name, age){
+  this.name =  name;
+  this.age = age;
+}
+
+Person.prototype.eat = function(){
+  console.log(`${this.name} is eating`)
+}
+
+
+const person1 = new Person('Bobi', 25)
+
+person1.eat()
+
+// Penulisan pada ES6
+
+class Orang{
+  constructor(nama, umur){
+    this.nama = nama;
+    this.umur = umur;
+  }
+
+  eat(){
+    console.log(`${this.nama} sedang makan`)
+  }
+}
