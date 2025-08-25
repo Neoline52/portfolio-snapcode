@@ -1,0 +1,36 @@
+class Vehicle{
+    constructor(brand, model, color){
+        this.brand = brand;
+        this.model = model;
+        this.color = color;
+    }
+
+start(){
+    console.log(`${this.brand} ${this.model} is starting`)
+}
+}
+
+// Anak dari Vehicle
+class Car extends Vehicle{
+    openTruck(){
+        console.log(`The trunk is now open.`)
+    }
+}
+
+class Motorcycle extends Vehicle{
+    kickStart(){
+        console.log(`The motorcycle is kick-started.`)
+    }
+}
+
+// Instance dari Car dan Motorcycle
+const car1 = new Car('Toyota', 'Avanza', 'Black');
+const motorcycle1 = new Motorcycle('Honda', 'Vario', 'Red')
+
+// Method dari Vehicle
+car1.start();
+motorcycle1.start();
+
+// Method yang masing-masing dimiliki oleh children class
+car1.openTruck();
+motorcycle1.kickStart();
